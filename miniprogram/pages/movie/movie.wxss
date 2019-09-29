@@ -1,0 +1,33 @@
+
+
+.movie{
+
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.movie-img{
+  width: 200rpx;
+  height: auto;
+  margin-right: 20rpx;
+}
+
+.movie-info{
+  flex: 1;
+}
+
+.movie-title{
+  color: #666;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.movie-score{
+  color: #ff8716;
+  font-weight: bold;
+}
+
+.btn-comment{
+  margin-top: 5px;
+}
