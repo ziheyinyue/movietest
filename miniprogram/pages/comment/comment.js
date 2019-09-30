@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
+    detail:{
 
+    }
   },
 
   /**
@@ -13,6 +15,19 @@ Page({
    */
   onLoad: function (options) {
     console.log(options);
+    wx.cloud.callFunction({
+      name:"getDetail",
+      data:{
+        movieid:options.movieid
+      }
+    }).then(res => {
+      console.log(res);
+      this.setData({
+        detail:JSON.parse(res.result)
+      })
+    }).catch(err=> {
+      console.error(err);
+    })
   },
 
   /**

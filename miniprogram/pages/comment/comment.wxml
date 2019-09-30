@@ -1,2 +1,20 @@
-<!--pages/comment/comment.wxml-->
-<text>pages/comment/comment.wxml</text>
+<view>
+  <view class="container" style="background:url({{detail.images.large}})">
+    <view class="detail-image">
+      <image src="{{detail.images.small}}"></image>
+    </view>
+    <view class="detail-info">
+      <view class="detail-title">{{detail.title}}</view>
+      <view>{{detail.original_title}}</view>
+      <view class="detail-score">{{detail.rating.average}}分</view>
+      <view>{{detail.countries[0]}} {{detail.countries[1]}}</view>
+      <view wx:for="{{detail.directors}}">导演：<text>{{item.name}} </text></view>
+    </view>
+  </view>
+  <view class="detail-summary">{{detail.summary}}</view>
+  <view wx:if="{{detail.photos}}.length>0">剧照：
+    <view class="detail-photo-container">
+      <view wx:for="{{detail.photos}}"><image src="{{item.image}}" mode="aspectFit"></image></view>
+    </view>
+  </view>
+</view>

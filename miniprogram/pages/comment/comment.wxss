@@ -1,1 +1,22 @@
-/* pages/comment/comment.wxss */
+.container{
+  height: 500rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 20rpx;
+}
+
+.detail-image{
+  width: 180rpx;
+  height: 80%;
+  margin-right: 16px;
+}
+
+.detail-image img{
+  width: 100%;
+  height: auto;
+}
+.detail-info{
+  width: 530rpx;
+  color: white;
+}
